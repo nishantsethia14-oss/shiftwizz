@@ -1,0 +1,38 @@
+// Version: 1.0.0
+type Contact__891480783 =
+  {
+    address : Text;
+    createdAt : Int;
+    id : Text;
+    itemCount : Text;
+    message : Text;
+    name : Text;
+    phone : Text
+  };
+type MovementQuote__98432217 =
+  {
+    createdAt : Int;
+    customerName : Text;
+    customerPhone : Text;
+    estimatedDate : Text;
+    fromAddress : Text;
+    id : Text;
+    items : Text;
+    toAddress : Text
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+actor {
+  stable contacts :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Contact__891480783]];
+      var elementIndex : Nat__490723111
+    };
+  stable movementQuotes :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?MovementQuote__98432217]];
+      var elementIndex : Nat__490723111
+    }
+};

@@ -1,0 +1,27 @@
+type MovementQuote = 
+ record {
+   createdAt: int;
+   customerName: text;
+   customerPhone: text;
+   estimatedDate: text;
+   fromAddress: text;
+   id: text;
+   items: text;
+   toAddress: text;
+ };
+type Contact = 
+ record {
+   address: text;
+   createdAt: int;
+   id: text;
+   itemCount: text;
+   message: text;
+   name: text;
+   phone: text;
+ };
+service : {
+  addContactRequest: (contact: Contact) -> (bool);
+  addMovementQuote: (quote: MovementQuote) -> (bool);
+  getContactRequests: () -> (vec Contact) query;
+  getMovementQuotes: () -> (vec MovementQuote) query;
+}
